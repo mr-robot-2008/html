@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+    <!--Styling the form-->
+    <style>
+        body {
+            background-color: #f7e7ce;
+        }
+       form { 
+            margin: 0 auto; 
+            width:250px;
+            padding:40px;
+            border-style: solid;
+            background-color: #f0ead6;
+        }
+        label,input {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .submit_button {
+            width: 120px;
+        }
+        .input_box {
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <!--FOrm in HTML-->
+    <h1>FORM IN HTML</h1>
+
+    <!--<form> tag to create a form-->
+    <form>
+        <!--<label> tag to create the label for the input needed-->
+        <label for="name">Email Address</label><br><br>
+        <!--<input> tag with type input to create a input box for the label above-->
+        <input class="input_box" type="text" name="Email Address" value="Enter Email Address"><br><br>
+        <!--<label> tag to create the label for the input needed-->
+        <label for="password">Password</label><br><br>
+        <!--<input> tag with type input to create a input box for the label above-->
+        <input  class="input_box" type="text" name="password" value="Enter Password"><br><br>
+        <!--<input> tag with type checkbox to create a  checkbox-->
+        <input type="checkbox">Remember the password</input><br></br>
+        <!--<input> tag with type submit to create a submit button-->
+        <input type="submit" value="Submit" class="submit_button">
+    </form>   
+    <!--End of form-->
+
+</body>
+</html>
