@@ -1,0 +1,1349 @@
+<html>
+<head>
+<title> Hover Horror </title>
+</head>
+<body>
+<div class="double1">Hover Me </div>
+<div class="double2">Hover Me </div>
+<div class="double3">Hover Me </div>
+<div class="double4">Hover Me </div>
+<div class="unexpected1">Hover Me </div>
+<div class="unexpected2">Hover Me </div>
+<div class="unexpected3">Hover Me </div>
+<div class="unexpected4">Hover Me </div>
+<div class="unexpected5">Hover Me </div>
+<div class="unexpected6">Hover Me </div>
+<div class="unexpected7">Hover Me </div>
+<div class="rounded1">Hover Me </div>
+<div class="rounded2">Hover Me </div>
+<div class="fading1">Hover Me </div>
+<div class="wavy1">Hover Me </div>
+<div class="infinite1">Hover Me </div>
+<div class="infinite2">Hover Me </div>
+<div class="infinite3">Hover Me </div>
+<div class="allsides1">Hover Me </div>
+<div class="allsides2">Hover Me </div>
+<div class="allsides3">Hover Me </div>
+<div class="allsides4">Hover Me </div>
+<div class="allsides5">Hover Me </div>
+<div class="allsides6">Hover Me </div>
+<div class="allsides7">Hover Me </div>
+<div class="thick1">Hover Me </div>
+<div class="shadowed1">Hover Me </div>
+<div class="fancy1">Hover Me </div>
+<div class="fancy2">Hover Me </div>
+<div class="fancy3">Hover Me </div>
+<div class="fancy4">Hover Me </div>
+<div class="fancy5">Hover Me </div>
+<div class="fancy6">Hover Me </div>
+<div class="fancy7">Hover Me </div>
+<div class="d1">Hover Me </div>
+<div class="transformed1">Hover Me </div>
+<div class="transformed2">Hover Me </div>
+<div class="inverted1">Hover Me </div>
+<div class="inverted2">Hover Me </div>
+<div class="inverted3">Hover Me </div>
+<div class="d2">Hover Me </div>
+<div class="d3">Hover Me </div>
+<div class="morphing1">Hover Me </div>
+<div class="morphing2">Hover Me </div>
+<div class="morphing3">Hover Me </div>
+<div class="morphing4">Hover Me </div>
+<div class="morphing5">Hover Me </div>
+<div class="morphing6">Hover Me </div>
+<div class="morphing7">Hover Me </div>
+<div class="morphing8">Hover Me </div>
+<div class="morphing9">Hover Me </div>
+<div class="curved0">Hover Me </div>
+<div class="zigzag1">Hover Me </div>
+<div class="arrow1">Hover Me </div>
+<div class="arrow2">Hover Me </div>
+<div class="circular1">Hover Me </div>
+<div class="circular2">Hover Me </div>
+<div class="circular3">Hover Me </div>
+<div class="circular4">Hover Me </div>
+<div class="sides1">Hover Me </div>
+<div class="sides2">Hover Me </div>
+<div class="sides3">Hover Me </div>
+<div class="sides4">Hover Me </div>
+<div class="fancy-6">Hover Me </div>
+<div class="fancy-2">Hover Me </div>
+<div class="fancy-3">Hover Me </div>
+<div class="fancy-4">Hover Me </div>
+<div class="fancy-5">Hover Me </div>
+<div class="broken1">Hover Me </div>
+<div class="steps1">Hover Me </div>
+<div class="steps2">Hover Me </div>
+<div class="steps3">Hover Me </div>
+<div class="steps4">Hover Me </div>
+<div class="steps5">Hover Me </div>
+<div class="steps6">Hover Me </div>
+<div class="steps7">Hover Me </div>
+</body>
+<style>
+.double1 {
+  background:
+    linear-gradient(currentColor 0 0) 0    100%/var(--d, 0) 3px no-repeat,
+    linear-gradient(currentColor 0 0) 100% 100%/var(--d, 0) 3px no-repeat;
+  transition:0.5s;
+}
+
+.double1:hover {
+  --d: 51%;
+}
+
+.double2 {
+  background:
+    linear-gradient(currentColor 0 0) 0 100% /var(--d, 0%) 3px no-repeat,
+    linear-gradient(90deg, transparent 50%, currentColor 0) bottom /calc(2*var(--d, 0%)) 3px no-repeat;
+  transition:0.5s;
+}
+
+.double2:hover {
+  --d: 51%;
+}
+
+.double3 {
+  background:
+    linear-gradient(currentColor 0 0) 100% 100% /var(--d, 0%) 3px no-repeat,
+    linear-gradient(-90deg, transparent 50%, currentColor 0) bottom /calc(2*var(--d, 0%)) 3px no-repeat;
+  transition:0.5s;
+}
+
+.double3:hover {
+  --d: 51%;
+}
+
+.double4 {
+  background:
+    linear-gradient( 90deg, transparent 50%, currentColor 0) 75% 100% /var(--d, 0%) 3px no-repeat,
+    linear-gradient(-90deg, transparent 50%, currentColor 0) 25% 100% /var(--d, 0%) 3px no-repeat;
+  transition:0.5s;
+}
+
+.double4:hover {
+  --d: 100%;
+}
+
+.unexpected1 {
+  background: 
+     linear-gradient(currentColor 0 0) left  var(--p, 50%) bottom 0 /var(--d, 10%) 3px no-repeat,
+     linear-gradient(currentColor 0 0) right var(--p, 50%) bottom 0 /var(--d, 10%) 3px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+}
+
+.unexpected1:hover {
+  --d: 100%;
+  --p: 100%;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.unexpected2 {
+  background: 
+    linear-gradient(currentColor 0 0) left  var(--p, 50%) bottom 0 /var(--d, 20px) 3px no-repeat,
+    linear-gradient(currentColor 0 0) right var(--p, 50%) bottom 0 /var(--d, 20px) 3px no-repeat;
+  transition: 0.3s, background-position 0s;
+}
+
+.unexpected2:hover {
+  --d: 100%;
+  --p: 100%;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.unexpected3 {
+  padding:8px;
+  border:3px solid;
+  outline:3px solid #0000;
+  outline-offset:100px;
+  transition:0s;
+}
+.unexpected3:hover {
+  outline-offset:-3px;
+  border-color:#0000;
+  outline-color:currentColor;
+  transition:0.5s;
+}
+
+.unexpected4 {
+  padding: 10px;
+  color:#0000;
+  text-shadow: 
+    0 0 0 #000,
+    100vmax 0 0 #fff0;
+  box-shadow: 100vmax 0 0 #0000;
+
+  background:linear-gradient(#000 0 0) 100vmax 0 no-repeat;
+  transition: 0.5s;
+}
+.unexpected4:hover {
+  text-shadow: 
+    -100vmax 0 0 #0000,
+    0 0 0 #fff;
+  box-shadow: 0 0 0 #000;
+  background-position: 0 0;
+}
+.unexpected5 {
+  padding: 10px;
+  color:#0000;
+  text-shadow: 
+    0 0 0 #000,
+    0 100vmax  0 #fff0;
+  box-shadow: 0 100vmax  0 #0000;
+
+  background:linear-gradient(#000 0 0) 0 100vmax no-repeat;
+  transition: 0.5s;
+}
+.unexpected5:hover {
+  text-shadow: 
+    0 -100vmax 0 #0000,
+    0 0 0 #fff;
+  box-shadow: 0 0 0 #000;
+  background-position: 0 0;
+}
+.unexpected6 {
+  padding: 10px;
+  outline: 3px solid #0000;
+  outline-offset: 100vmax;
+  clip-path: polygon(0 0,0 -100vmax,100% -100vmax,100% 0,calc(100% + 100vmax) 0,calc(100% + 100vmax) 100%,100% 100%,100% calc(100% + 100vmax),0% calc(100% + 100vmax),0% 100%,-100vmax 100%,-100vmax 0);
+  transition: 0.5s;
+}
+.unexpected6:hover {
+  outline-offset: -3px;
+  outline-color:#000;
+}
+
+.unexpected7 {
+  padding: 10px;
+  color:#000;
+  text-shadow: 
+    0 0 0 #000,
+    100vmax 0 0 #fff0;
+  box-shadow: 100vmax 0 0 #0000;
+
+  background:linear-gradient(#000 0 0) 100vmax 0/100% 100% no-repeat #0000;
+  transition: 0.5s,background-size 0s 0.5s,background-position 0s 0.5s,text-shadow 0s 0.5s,box-shadow 0s 0.5s;
+}
+.unexpected7:hover {
+  color:#0000;
+  text-shadow: 
+    -100vmax 0 0 #0000,
+    0 0 0 #fff;
+  box-shadow: 0 0 0 #000;
+  background-position: 0 0;
+  background-size: 0% 0%;
+  background-color:#000;
+  transition: 0.5s,background-size 0s 0.5s,background-color 0s 0.5s,color 0s 0s;
+}
+
+.rounded1 {
+  background: 
+     radial-gradient(circle closest-side, currentColor 90%, transparent) 
+    bottom /var(--d, 80%) 12px repeat-x;
+  transition: 0.5s;
+}
+.rounded1:hover {
+  --d: 12px;
+}
+
+.rounded2 {
+  padding-bottom: 8px;
+  background:
+    radial-gradient(circle closest-side, currentColor 80%, transparent) bottom /12px 12px no-repeat,
+    radial-gradient(circle closest-side, currentColor 80%, transparent) bottom /12px 12px no-repeat,
+    linear-gradient(currentColor 0 0) bottom left /var(--d, 0%) 12px no-repeat,
+    linear-gradient(currentColor 0 0) bottom right/var(--d, 0%) 12px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s;
+}
+.rounded2:hover {
+  --d: 100%;
+  background-position: bottom left, bottom right;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+
+.fading1 {
+  background: 
+      linear-gradient(-45deg, transparent calc(100%/3), rgba(0, 0, 0, 0.5), transparent calc(200%/3)) 
+      bottom right/350% 100% no-repeat;
+  transition: 0.5s linear;
+}
+.fading1:hover {
+  background-position: bottom left;
+}
+
+.wavy1 {
+  padding-bottom:10px;
+  background:
+     radial-gradient(50% 100% at 50% -5px            ,#0000 calc(100% - 4px), currentColor calc(100% - 3px) calc(100% - 1px),#0000) 0    100%,
+     radial-gradient(50% 100% at 50% calc(100% + 5px),#0000 calc(100% - 4px), currentColor calc(100% - 3px) calc(100% - 1px),#0000) 10px calc(100% - 8px);
+  background-size:20px 10px;
+  background-repeat:repeat-x;
+  transition:99999s;
+}
+.wavy1:hover {
+  transition:40s linear;
+  background-position:1000px 100%, 1010px calc(100% - 8px);
+}
+
+.infinite3 {    
+  padding:8px;
+  background:
+    repeating-linear-gradient(  0deg,#0000 0 7.5%,currentColor 0 10%                   ) bottom left ,
+    repeating-linear-gradient( 90deg,#0000 0 5%  ,currentColor 0 7.5%,#0000 0 10%) top left    ,
+    repeating-linear-gradient(180deg,#0000 0 2.5%,currentColor 0 5%  ,#0000 0 10%) top right   ,
+    repeating-linear-gradient(-90deg,currentColor 0 2.5%,#0000 0 10%) bottom right;
+  background-size:3px 4000%,4000% 3px;
+  background-repeat:no-repeat;
+  transition:0s 9999s;
+}
+.infinite3:hover {  
+  background-position:top left,top right,bottom right,bottom left;
+  transition:15s linear;
+ }
+ 
+.infinite2 {
+  background: 
+     repeating-linear-gradient(90deg, currentColor 0 15px, transparent 0 30px) 
+     bottom right /2000% 3px no-repeat;
+  transition: 99999s linear;
+}
+.infinite2:hover {
+  background-position: bottom left;
+  transition: 40s linear;
+}
+
+.infinite1 {
+  background:
+    repeating-linear-gradient(90deg, currentColor 0 15px, transparent 0 30px),
+    repeating-linear-gradient(90deg, currentColor 0 15px, transparent 0 30px);
+  background-position: center bottom;
+  background-size: 2000% 3px;
+  background-repeat: no-repeat;
+  transition: 99999s linear;
+}
+.infinite1:hover {
+  background-position: bottom left, bottom right;
+  transition: 40s linear;
+}
+
+.allsides1 {
+  background:
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.allsides1:hover {
+  --d: 100%;
+}
+
+.allsides2 {
+  background:
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 100% 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.allsides2:hover {
+  --d: 100%;
+}
+
+.allsides3 {
+  background:
+    linear-gradient(currentColor 0 0) top,
+    linear-gradient(currentColor 0 0) left,
+    linear-gradient(currentColor 0 0) bottom,
+    linear-gradient(currentColor 0 0) right;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.allsides3:hover {
+  --d: 100%;
+}
+
+.allsides4 {
+  background:
+    linear-gradient(currentColor 0 0) var(--p, 100%) 0,
+    linear-gradient(currentColor 0 0) 0 var(--d, 0),
+    linear-gradient(currentColor 0 0) var(--d, 0) 100%,
+    linear-gradient(currentColor 0 0) 100% var(--p, 100%);
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s, background-position 0s 0.5s;
+}
+.allsides4:hover {
+  --d: 100%;
+  --p: 0%
+}
+
+.allsides5 {
+  background:
+    linear-gradient(currentColor 0 0) var(--d, 0) 0,
+    linear-gradient(currentColor 0 0) 0 var(--d, 0),
+    linear-gradient(currentColor 0 0) var(--p, 100%) 100%,
+    linear-gradient(currentColor 0 0) 100% var(--p, 100%);
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s, background-position 0s 0.5s;
+}
+.allsides5:hover {
+  --d: 100%;
+  --p: 0%
+}
+
+.allsides6 {
+  background:
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 0,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 100%,
+    linear-gradient(currentColor 0 0) 100% 100%;
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.allsides6:hover {
+  --d: 20px;
+}
+
+.allsides7 {
+  background:
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 0 100%,
+    linear-gradient(currentColor 0 0) 100% 0,
+    linear-gradient(currentColor 0 0) 100% 0;
+  background-size: 20px 3px, 3px 20px;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.allsides7:hover {
+  background-position: 100% 100%, 0 0, 0 0, 100% 100%;
+}
+
+.thick1 {
+  background: 
+     linear-gradient(#000 0 0) 
+     50% calc(-3px - 100%) /var(--d, 0%) 200% no-repeat;
+  transition: 0.3s, background-size 0.3s 0.3s;
+}
+.thick1:hover {
+  --d: 100%;
+  background-position: 50% 0%;
+  color: #fff;
+  transition: 0.3s, background-position 0.3s 0.3s, color 0.3s 0.3s;
+}
+
+.shadowed1 {
+   padding:8px;
+   box-shadow:0 0 0px #0004;
+   transition:0.4s linear,background 0.3s 0.4s linear,color 0.3s 0.4s linear;
+ }
+.shadowed1:hover {
+   background-color:#000;
+   color:#fff;
+   transform:perspective(100px) translateZ(5px);
+   box-shadow:0 10px 20px  #000a;
+   transition:0.4s linear,transform 0.3s 0.4s linear,box-shadow 0.3s 0.4s linear;
+ }
+ 
+.fancy2 {
+  background:
+    radial-gradient(circle at bottom right, black 50%, transparent) bottom right/var(--d, 0) var(--d, 0) no-repeat,
+    radial-gradient(circle at bottom left, black 50%, transparent) bottom left /var(--d, 0) var(--d, 0) no-repeat,
+    linear-gradient(black 0 0) bottom /15px 3px no-repeat,
+    linear-gradient(black 0 0) bottom /15px 3px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s
+}
+.fancy2:hover {
+  transition: 0.3s, background-size 0.5s 0.3s, color 0.3s 0.3s;
+  background-position: bottom right, bottom left;
+  --d: 150px;
+  color: #fff
+}
+
+.fancy3 {
+  background:
+    radial-gradient(circle, black 50%, transparent) center/var(--d, 0) var(--d, 0) no-repeat,
+    linear-gradient(black 0 0) bottom -12px left 50% /15px 15px no-repeat;
+  transition: 0.3s, background-position 0.3s 0.3s
+}
+.fancy3:hover {
+  transition: 0.3s, background-size 0.4s 0.3s, color 0.3s 0.3s;
+  background-position: center;
+  --d: 180%;
+  color: #fff
+}
+
+.fancy4 {
+  background:
+    repeating-linear-gradient(black 0 8px, transparent 0 16px) left /var(--d, 0) 100% no-repeat,
+    repeating-linear-gradient(transparent 0 8px, black 0 16px) right/var(--d, 0) 100% no-repeat;
+  transition: 0.5s;
+}
+.fancy4:hover {
+  --d: 100%;
+  color: #fff
+}
+
+.fancy5 {
+  background:
+    radial-gradient(farthest-side, transparent calc(100% - 150px), black 0) 
+    center /var(--d, 600px) var(--d, 600px) no-repeat;
+  transition: 0.5s;
+}
+.fancy5:hover {
+  --d: 300px;
+  color: #fff
+}
+
+.fancy6 {
+  background:
+    linear-gradient(45deg, #000 50%, transparent 0) right /250% 100% no-repeat,
+    linear-gradient(45deg, transparent 50%, #000 0) left /250% 100% no-repeat;
+  transition: 0.5s;
+}
+.fancy6:hover {
+  background-position: center;
+  color: #fff;
+}
+
+.fancy1 {
+  background:
+    conic-gradient(from -45deg, black 90deg, transparent 91deg) bottom /20px 250% repeat-x,
+    conic-gradient(from -45deg, transparent 90deg, black 91deg) top /20px 250% repeat-x;
+  transition: 0.5s;
+}
+.fancy1:hover {
+  background-position: center;
+  color: #fff
+}
+
+.fancy7 {
+  padding:8px;
+  background:
+    conic-gradient(from  90deg at 50% calc(100% - 10px),#0000 90deg,#000 0) 0  200% /20px 200%,
+    conic-gradient(from -90deg at 50% 10px             ,#0000 90deg,#000 0) 0 -100% /20px 200%;
+  background-repeat:repeat-x;
+  transition:0.5s;
+}
+.fancy7:hover {  
+  background-position:0 calc(150% + 10px),0 calc(-50% - 10px);
+  color:#fff;
+ }
+
+.d1 {
+  --c:20px;  /* the cube perspective */
+  --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */ 
+  border: solid transparent;
+  border-width:0 0 var(--c) var(--c) ;
+  background:
+    linear-gradient(-45deg,transparent var(--g),rgba(255,255,255,0.6) 0) left   /var(--c) 100%,
+    linear-gradient(135deg,transparent var(--g),rgba(255,255,255,0.3) 0) bottom /100% var(--c);
+  background-repeat:no-repeat;
+  background-origin:border-box;
+  transition:0.3s,background-color 0.3s 0.3s,color 0.3s 0.3s;
+  transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+  clip-path: 
+    polygon(var(--c) 0%, var(--c) 0%, 
+    100% 0%, 
+    100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c)),
+    var(--c) calc(100% - var(--c)));
+}
+.d1:hover {
+  transition:0.3s 0.3s,background-color 0.3s,color 0.3s;
+  background-color:blue;
+  color:#fff;
+  transform:translate(0,0);
+  clip-path: 
+    polygon(0% var(--c), var(--c) 0%, 
+    100% 0%, 
+    100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+    0% 100%,0% 100%);
+}
+
+.transformed2 {
+  padding:0 5px;
+  box-shadow:0 0 currentColor;
+  transition:0.5s linear;
+}
+.transformed2:hover {  
+  box-shadow:-8px 8px currentColor;
+  transform:translate(8px,-8px);
+ }
+
+ .transformed1 {
+  box-shadow:0 40px currentColor,0 -40px currentColor;
+  clip-path:polygon(0 1px,50% 1px,100% 1px,100% calc(100% - 1px),50% calc(100% - 1px),0 calc(100% - 1px));
+  transition:0.5s linear;
+}
+.transformed1:hover {  
+  clip-path:polygon(0 1px,50% 1px,100% calc(-38.43px/2),100% calc(100% - 1px),50% calc(100% - 1px),0 calc(100% + 38.43px/2)); 
+  transform:skewY(10deg);
+ }
+
+.inverted3 {    
+  padding:8px;
+  color:#0000;
+  background:
+    radial-gradient(circle 30px at 50% 75%, #fff 95%, #000),
+    radial-gradient(circle 30px at 50% 75%, #000 95%, #0000),
+    #000;
+  -webkit-background-clip:text,padding-box,text;
+  background-clip:text,padding-box,text;
+  background-size:100% 200%;
+  background-position:top;
+  background-repeat:repeat-x;
+  transition:0.3s,background-position 0.3s 0.3s;
+}
+.inverted3:hover {  
+  background-size:15% 200%;
+  background-position:bottom;
+  transition:0.3s,background-size 0.3s 0.3s;
+ }
+
+.inverted2 {
+  padding:8px;
+  color:#0000;
+  background:
+    conic-gradient(from -45deg at 50% calc(5*100%/6),#fff 90deg, #000  0) calc(0*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(5*100%/6),#000 90deg, #ffff 0) calc(0*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(4*100%/6),#fff 90deg, #000  0) calc(1*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(4*100%/6),#000 90deg, #ffff 0) calc(1*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(3*100%/6),#fff 90deg, #000  0) calc(2*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(3*100%/6),#000 90deg, #ffff 0) calc(2*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(2*100%/6),#fff 90deg, #000  0) calc(3*100%/3) var(--d, 100%),
+    conic-gradient(from -45deg at 50% calc(2*100%/6),#000 90deg, #ffff 0) calc(3*100%/3) var(--d, 100%);
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  background-size: calc(100%/4) 600%;
+  background-repeat: no-repeat;
+  transition: 1s linear;
+}
+.inverted2:hover {
+  --d: 0%;
+}
+
+.inverted1 {    
+  padding:8px;
+  color:#0000;
+  background:
+    conic-gradient(            #fff 0 90deg, #fff0 0) bottom left,
+    conic-gradient(            #000 0 90deg, #fff0 0) bottom left,
+    conic-gradient(from  90deg,#fff 0 90deg, #fff0 0) top left,
+    conic-gradient(from  90deg,#000 0 90deg, #fff0 0) top left,
+    conic-gradient(from 180deg,#fff 0 90deg, #fff0 0) top right,
+    conic-gradient(from 180deg,#000 0 90deg, #fff0 0) top right,
+    conic-gradient(from -90deg,#fff 0 90deg, #fff0 0) bottom right,
+    conic-gradient(from -90deg,#000 0 90deg, #fff0 0) bottom right,
+    #000;
+  -webkit-background-clip:text,padding-box;
+  background-clip:text,padding-box;
+  background-size:202% 202%;
+  transition:0.5s;
+}
+.inverted1:hover {  
+  background-position:center;
+ }
+
+.d3 {
+   --d:14px;
+   
+   padding:8px 8px 8px calc(8px + var(--d));
+   background:linear-gradient(rgba(255,255,255,0.4) 0 0) left/var(--d) 100% no-repeat;
+   clip-path:polygon(var(--d) 3px,var(--d) 0,100% 0,100% 100%,var(--d) 100%,var(--d) calc(100% - 3px));
+   transform:perspective(1000px) rotateY(0deg);
+   transition:0.4s,color 0.4s 0.4s,background-color 0.4s 0.4s;
+ }
+ .d3:hover {
+   background-color:#000;
+   color:#fff;
+   clip-path:polygon(0px 3px,var(--d) 0,100% 0,100% 100%,var(--d) 100%,0  calc(100% - 3px));
+   transform:perspective(1000px) rotateY(40deg);
+   transition:0.4s,clip-path 0.4s 0.4s,transform 0.4s 0.4s;
+ }
+ 
+  .d2 {
+   --d:14px;
+   
+   padding:8px calc(8px + var(--d)) 8px 8px;
+   background:linear-gradient(rgba(255,255,255,0.4) 0 0) right/var(--d) 100% no-repeat;
+   clip-path:polygon(0 0,calc(100% - var(--d)) 0,calc(100% - var(--d)) 3px,calc(100% - var(--d)) calc(100% - 3px),calc(100% - var(--d)) 100%,0 100%); 
+   transform:perspective(1000px) rotateY(0deg);
+   transition:0.4s,color 0.4s 0.4s,background-color 0.4s 0.4s;
+ }
+ .d2:hover {
+   background-color:blue;
+   color:#fff;
+   clip-path:polygon(0 0,calc(100% - var(--d)) 0,100% 3px,100% calc(100% - 3px),calc(100% - var(--d)) 100%,0 100%); 
+   transform:perspective(1000px) rotateY(-40deg);
+   transition:0.4s,clip-path 0.4s 0.4s,transform 0.4s 0.4s;
+ }
+
+ .morphing1 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+ }
+ .morphing1:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(8px 0,calc(100% + 8px) 0,calc(100% - 8px) 100%,-8px 100%);
+ }
+ 
+.morphing2 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,50% 0,100% 0,100% 50%,100% 100%,50% 100%,0 100%, 0 50%);
+ }
+ .morphing2:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(-30px -30px,50% 0,calc(100% + 30px) -30px,100% 50%,calc(100% + 30px) calc(100% + 30px),50% 100%,-30px calc(100% + 30px), 0 50%);
+ }
+  
+.morphing3 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,50% 0,100% 0,100% 100%,50% 100%,0 100%);
+ }
+ .morphing3:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(0 -20px,50% 0,100% -20px,100% 100%,50% calc(100% + 20px),0 100%);
+ }
+ 
+.morphing4 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,50% 0,50% 10px,50% 0,100% 0,100% 50%,100% 100%,50% 100%,50% calc(100% - 10px),50% 100%,0 100%,0 50%);
+ }
+ .morphing4:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(-30px -20px,calc(50% - 20px) -20px,50% 10px,calc(50% + 20px) -20px,calc(100% + 30px) -20px,100% 50%,calc(100% + 30px) calc(100% + 20px),calc(50% + 20px) calc(100% + 20px),50% calc(100% - 10px),calc(50% - 20px) calc(100% + 20px),-30px calc(100% + 20px),0 50%);
+ }
+  
+.morphing5 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,10px 0,10px 0,100% 0,100% 50%,100% 100%,10px 100%,10px 100%,0 100%,0 calc(50% + 10px),0 calc(50% + 10px),0 calc(50% + 10px),0 calc(50% - 10px),0 calc(50% - 10px),0 calc(50% - 10px));
+ }
+ .morphing5:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(0 -20px,20px -30px,20px 0,calc(100% - 10px) 0,calc(100% + 20px) 50%,calc(100% - 10px) 100%,20px 100%,20px calc(100% + 30px),0 calc(100% + 20px),0 calc(50% + 10px),-35px calc(50% + 10px),-40px calc(50% + 15px),-40px calc(50% - 15px),-35px calc(50% - 10px),0 calc(50% - 10px))
+ }
+
+div.morphing6 {
+   margin:50px 25px;
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,0 0,40% 0,45% 0,55% 0,60% 0,100% 0,100% 0,100% 50%,100% 100%,100% 100%,60% 100%,55% 100%,45% 100%,40% 100%,0 100%,0 100%,0 50%);
+ }
+ .morphing6:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(0 -90px,0 10%,30% 0,40% -20px,60% -20px,70% 0,100% 10%,100% -90px,calc(100% + 15px) 50%,100% calc(100% + 90px),100% 90%,70% 100%,60% calc(100% + 20px),40% calc(100% + 20px),30% 100%,0 90%,0 calc(100% + 90px),-20px 50%);
+ }
+  
+div.morphing7 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  transition: 0.3s,box-shadow 0.3s 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+   clip-path: polygon(0 0,20% 0,30% 0,calc(50% - 10px) 0,calc(50% - 10px) 0,50% 0,50% 0,calc(50% + 10px) 0,calc(50% + 10px) 0,70% 0,80% 0,100% 0,100% 90%,100% 100%,60% 100%,50% 100%,40% 100%,0 100%,0 90%);
+ }
+ .morphing7:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path 0.4s 0.3s; 
+   clip-path: polygon(-80px -40px,20% -30px,30% 0,calc(50% - 15px) 0,calc(50% - 10px) -20px,calc(50% - 8px) -15px,calc(50% + 8px) -15px,calc(50% + 10px) -20px,calc(50% + 15px) 0,70% 0,80% -30px,calc(100% + 80px) -40px,100% 80%,calc(100% + 20px) calc(100% + 20px),60% 100%,50% calc(100% + 40px),40% 100%,-20px calc(100% + 20px),0 80%);
+ }  
+
+ .morphing8 {
+   padding:8px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+   transition: 0.3s,clip-path 0s;
+   clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+ }
+ .morphing8:hover {
+  --c:#000;
+  color:#fff;
+  transition: 0.3s,clip-path cubic-bezier(.5,150,.5,-150) 0.4s 0.3s; 
+  clip-path: polygon(0.5px 0,calc(100% + 0.5px) 0,calc(100% - 0.5px) 100%,-0.5px 100%);
+ }
+
+ div.morphing9 {
+   padding:8px;
+    margin: 100px 25px;
+   box-shadow:0 0 0px 100px var(--c,#0000);
+   background:
+     conic-gradient(from  97deg  at top left ,#868686 22deg,#0000 0) 20% 86%,
+     conic-gradient(from -120deg at top right,#868686 22deg,#0000 0) 80% 86%,
+     var(--c,#0000);
+   background-repeat: no-repeat;
+   background-size: 0 0;
+   clip-path: polygon(0 0, 30% 0, 45% 0,55% 0, 70% 0,100% 0,100% 100%,100% 100%,90% 100%,60% 100%,50% 100%,40% 100%,10% 100%,0 100%,0 100%);
+   transition: 0.3s 0.4s,clip-path 0.4s,padding 0.4s,background-size 0.2s;
+ }
+ div.morphing9:hover {
+  --c:#000;
+  color:#fff;
+  padding-bottom: 20px;
+   background-size: 47px 20px;
+   clip-path: polygon(5% -100px, 20% 0, 45% -20px,55% -20px, 80% 0,95% -100px,100% 100%,85% calc(100% + 80px),90% 100%,60% calc(100% + 10px),50% calc(100% + 30px),40% calc(100% + 10px),10% 100%,15% calc(100% + 80px),0 100%);
+  transition: 0.3s,padding 0.4s 0.3s,clip-path 0.4s 0.3s,background-size 0.15s 0.7s; 
+ }
+
+
+ .curved0 {
+  padding: 8px;
+  border-radius:12px;
+  border:3px solid currentColor;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) top   /var(--d,0%) 5px,
+    linear-gradient(#fff 0 0) bottom/var(--d,0%) 5px,
+    linear-gradient(#fff 0 0) left  /5px var(--d,0%),
+    linear-gradient(#fff 0 0) right /5px var(--d,0%),
+    linear-gradient(#fff 0 0) center /calc(100% - 12px) calc(100% - 12px);
+  -webkit-mask-repeat:no-repeat;
+  transition: 0.5s;
+}
+.curved0:hover {
+  --d:100%;
+}
+
+.zigzag1 {
+  --cos45:0.7071;
+  padding-bottom:10px;
+  background: 
+      linear-gradient( 135deg, #0000 calc(5px * var(--cos45)),currentColor 0 calc(10px * var(--cos45)),#0000 0), 
+      conic-gradient(from 135deg at top,currentColor 90deg, #0000 0),
+      linear-gradient(-135deg, #0000 calc(5px * var(--cos45)),currentColor 0 calc(10px * var(--cos45)),#0000 0);
+    background-size: 15px 10px,15px calc(4px * var(--cos45));
+  background-position: 0 100%, 0 calc(100% - 10px);
+  background-repeat: repeat-x;
+  transition:99999s;
+}
+.zigzag1:hover {
+  transition:40s linear;
+  background-position: 1000px 100%, 1000px calc(100% - 10px);
+}
+
+.arrow1 {
+   padding:10px;
+   background:
+    conic-gradient(from -135deg,currentColor 90deg,#0000 0) right var(--p,calc(50% - 20px)) bottom 0,
+    linear-gradient(-90deg,currentColor 0 0)  bottom 6px center,
+    conic-gradient(from   45deg,currentColor 90deg,#0000 0) left  var(--p,calc(50% - 20px)) bottom 0;
+   background-size:  16px 16px,var(--d,25px) 3px;
+   background-repeat: no-repeat;
+   transition: 0.5s;
+ }
+ .arrow1:hover {
+   --d:calc(100% - 16px);
+   --p:-8px;
+ }
+
+ .arrow2 {
+   padding:10px;
+   background:
+    conic-gradient(from 135deg at top,currentColor 90deg,#0000 0) left 50% bottom calc(8px + var(--p,-16px))/16px 8px,
+    linear-gradient(90deg,currentColor 3px,#0000 0)  left calc(50% + 6px) bottom var(--p,-16px) /16px 10px;
+   background-repeat: repeat-x;
+   transition: 0.5s; 
+ }
+ .arrow2:hover {
+   --p:0px;
+ }
+
+.circular1 {
+   padding:0 10px;
+   line-height: 1.6em;
+   border-radius: 0; 
+   transition: 0.3s 0.3s,border-radius 0.3s; 
+ }
+ .circular1:hover {
+   border-radius: 0.8em;
+   background: #000; 
+   color:#fff;
+   transition: 0.3s,border-radius 0.3s 0.3s; 
+}
+.circular2 {
+   padding:0 15px;
+   line-height: 1.6em;
+   transition: 0.3s 0.3s,border-radius 0.3s; 
+ }
+ .circular2:hover {
+   background: #000; 
+   color:#fff;
+   border-radius:1.2em 0.4em 1.2em 0.4em;
+   transition: 0.3s,border-radius 0.3s 0.3s; 
+}
+.circular3 {
+   padding:0 15px;
+   line-height: 1.6em;
+   -webkit-mask:
+     radial-gradient(farthest-side,#000 97%,#0000) center /1.6em 1.6em space,
+     linear-gradient(#000 0 0) center/100% var(--d,100%) no-repeat;
+   transition: 0.3s,background 0.3s 0.3s,color 0.3s 0.3s;
+ }
+ .circular3:hover {
+   --d:70%;
+   border-radius: 1.6em;
+   background: #000; 
+   color:#fff;
+   transition: 0.3s 0.3s,background 0.3s,color 0.3s; 
+}
+
+.circular4 {
+   padding:0 0.4em;
+   line-height: 1.6em;
+   -webkit-mask:
+     radial-gradient(farthest-side at right,#0000 97%,#000) 0 0    /var(--d,0px) 0.8em repeat-y,
+     radial-gradient(farthest-side at left ,#0000 97%,#000) 100% 0 /var(--d,0px) 0.8em repeat-y,
+     linear-gradient(#000 0 0);
+   -webkit-mask-composite:destination-out;
+   mask-composite:exclude;
+   transition: 0.3s,background 0.3s 0.3s,color 0.3s 0.3s; 
+ }
+ .circular4:hover {
+  --d:0.4em;
+   background: #000; 
+   color:#fff;
+   transition: 0.3s 0.3s,background 0.3s,color 0.3s; 
+}
+
+.sides3 {
+  --b:2px;
+  --s:10px;
+  padding: 10px;
+  background:
+    linear-gradient(currentColor 0 0) 0 0      /var(--d,0) var(--b),
+    linear-gradient(currentColor 0 0) 0 0      /var(--b) var(--d,0),
+    linear-gradient(currentColor 0 0) 100% 100%/var(--d,0) var(--b),
+    linear-gradient(currentColor 0 0) 100% 100%/var(--b) var(--d,0),
+  
+    linear-gradient(currentColor 0 0) left var(--s) bottom var(--p,calc(-1*var(--s))) /var(--b) var(--s),
+    linear-gradient(currentColor 0 0) left var(--p,calc(-1*var(--s))) bottom var(--s)/var(--s) var(--b),
+
+    linear-gradient(currentColor 0 0) right var(--s) top var(--p,calc(-1*var(--s))) /var(--b) var(--s),
+    linear-gradient(currentColor 0 0) right var(--p,calc(-1*var(--s))) top var(--s) /var(--s) var(--b);
+  background-repeat: no-repeat;
+  transition: 0.2s linear,background-size 0.4s 0.2s;
+}
+.sides3:hover {
+  --d:calc(100% - var(--s));
+  --p:var(--b);
+  transition: 0.4s,background-position 0.2s 0.4s linear;
+}
+
+ .sides4 {
+  --b:2px;
+  --s:10px;
+  padding: 10px;
+  background:
+    linear-gradient(currentColor 0 0) top   /var(--d,0) var(--b),
+    linear-gradient(currentColor 0 0) bottom/var(--d,0) var(--b),
+    linear-gradient(currentColor 0 0) left  /var(--b) var(--d,0),
+    linear-gradient(currentColor 0 0) right /var(--b) var(--d,0),
+  
+    linear-gradient(currentColor 0 0) left var(--s) top var(--p,calc(-1*var(--s)))  /var(--b) var(--s),
+    linear-gradient(currentColor 0 0) left var(--p,calc(-1*var(--s))) top var(--s)  /var(--s) var(--b),
+
+    linear-gradient(currentColor 0 0) left var(--s) bottom var(--p,calc(-1*var(--s))) /var(--b) var(--s),
+    linear-gradient(currentColor 0 0) left var(--p,calc(-1*var(--s))) bottom var(--s)/var(--s) var(--b),
+
+    linear-gradient(currentColor 0 0) right var(--s) bottom var(--p,calc(-1*var(--s))) /var(--b) var(--s),
+    linear-gradient(currentColor 0 0) right var(--p,calc(-1*var(--s))) bottom var(--s) /var(--s) var(--b),
+
+    linear-gradient(currentColor 0 0) right var(--s) top var(--p,calc(-1*var(--s))) /var(--b) var(--s),
+    linear-gradient(currentColor 0 0) right var(--p,calc(-1*var(--s))) top var(--s) /var(--s) var(--b);
+  background-repeat: no-repeat;
+  transition: 0.2s linear,background-size 0.4s 0.2s;
+}
+.sides4:hover {
+  --d:calc(100% - 2*var(--s));
+  --p:var(--b);
+  transition: 0.4s,background-position 0.2s 0.4s linear;
+}
+
+.sides1 {
+  --b:2px;
+  padding: 10px;
+  background:
+    linear-gradient(currentColor 0 0) top   /var(--d,0) var(--b),
+    linear-gradient(currentColor 0 0) bottom/var(--d,0) var(--b),
+    linear-gradient(currentColor 0 0) left  /var(--b) var(--d,0),
+    linear-gradient(currentColor 0 0) right /var(--b) var(--d,0);
+  outline:var(--b) solid #0000;
+  outline-offset: calc(-1*var(--b));
+  background-repeat: no-repeat;
+  transition: 0.3s,outline-color 0s 0.2s ,background-size 0.4s 0.3s linear;
+}
+.sides1:hover {
+  --d:100%;
+  outline-color: currentColor;
+  outline-offset: 8px;
+  transition: 0.4s,outline-color 0s 0.4s,outline-offset 0.3s 0.4s linear;
+}
+
+ .sides2 {
+  --b:2px;
+  --w:0px;
+  padding: 10px;
+  border:var(--b) solid var(--c,#0000);
+  box-shadow: 0 0 0 100px var(--c,#0000);
+  clip-path: polygon(0 var(--w),var(--b) var(--w),var(--b) 0,calc(100% - var(--w)) 0,calc(100% - var(--w)) var(--b),100% var(--b),100% calc(100% - var(--w)),calc(100% - var(--b)) calc(100% - var(--w)),calc(100% - var(--b)) 100%,var(--w) 100%,var(--w) calc(100% - var(--b)),0 calc(100% - var(--b)));
+  transition: 0.3s 0.3s,clip-path 0.3s;
+  }
+.sides2:hover {
+  --c:#000;
+  --w:-50px;
+  transition: 0.3s,clip-path 0.3s 0.3s;
+}
+
+.fancy-2 {
+   padding:0 8px 12px;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:linear-gradient(#000 0 0) top/100% 0 no-repeat;
+   clip-path: polygon(0 calc(10px + var(--x,-10px)),-15px calc(10px + var(--x,-10px)),-15px var(--x,-10px),0 var(--x,-10px),0 -10px,100% -10px,100% var(--x,-10px),calc(100% + 15px) var(--x,-10px),calc(100% + 15px) calc(10px + var(--x,-10px)),100% calc(10px + var(--x,-10px)),100% 100%, 0 100%);
+  transition: 0.3s linear,box-shadow 0.2s 0.3s; 
+ }
+ .fancy-2:hover {
+  --c:#000;
+  color:#fff;
+  --x:calc(100% - 10px);
+  background-size: 100% 100%;
+  transition: 0.2s,clip-path linear 0.4s 0.2s, background-size linear 0.4s 0.2s, color linear 0.4s 0.2s; 
+ }
+
+ .fancy-3 {
+   outline:15px solid var(--c,#0000);
+   outline-offset: 100px;
+   background:
+    linear-gradient(#000 0 0) top,
+    linear-gradient(#000 0 0) left,
+    linear-gradient(#000 0 0) bottom,
+    linear-gradient(#000 0 0) right;
+   background-size: 100% 0,0 100%;
+   background-repeat: no-repeat;
+   transition: 0.3s 0.3s linear,background-size linear 0.3s,color 0.3s; 
+ }
+ .fancy-3:hover {
+  --c:#000;
+   color:#fff;
+   background-size: 100% 100%;
+   outline-offset: 0px;
+   transition: 0.3s linear,background-size linear 0.3s 0.3s,color 0.3s 0.3s; 
+ }
+
+  .fancy-4 {
+   padding: 10px;
+   background:
+    radial-gradient(farthest-side at top    left ,#000 97%,#0000) top -15px    left  -15px,
+    radial-gradient(farthest-side at top    right,#000 97%,#0000) top -15px    right -15px,
+    radial-gradient(farthest-side at bottom left ,#000 97%,#0000) bottom -15px left  -15px,
+    radial-gradient(farthest-side at bottom right,#000 97%,#0000) bottom -15px right -15px;
+   background-size: 15px 15px;
+   background-repeat: no-repeat;
+   transition: 0.3s linear,background-position 0.3s 0.4s; 
+ }
+ .fancy-4:hover {
+   color:#fff;
+   background-size: 140px 140px;
+   background-position: top left,top right,bottom left,bottom right;
+   transition: 0.3s ,background-size 0.4s 0.4s,color 0.4s 0.4s; 
+ }
+
+  .fancy-5 {
+   padding: 10px;
+   background:
+     conic-gradient(from  135deg,#000 90deg,#0000 0) top,
+     conic-gradient(from   45deg,#000 90deg,#0000 0) left,
+     conic-gradient(from  -45deg,#000 90deg,#0000 0) bottom,
+     conic-gradient(from -135deg,#000 90deg,#0000 0) right;
+   background-size: 100% 200%,200% 100%;
+   background-repeat: no-repeat;
+   transition: 0.3s ; 
+ }
+ .fancy-5:hover {
+   color:#fff;
+   background-position: center;
+}
+
+  .fancy-6 {
+   padding: 0 10px;
+   line-height: 1.4em;
+   border-radius: 50px; 
+   background:
+      radial-gradient(farthest-side,#000 98%,#0000) -1.4em 0/1.4em 1.4em,
+      linear-gradient(90deg, #000 calc(100% - 0.7em),#0000 0) left/0% 100%;
+   background-repeat: no-repeat;
+   transition: 0.3s ; 
+ }
+ .fancy-6:hover {
+   color:#fff;
+   background-size: 1.4em 1.4em,100% 100%;
+   background-position: right,left;
+}
+
+.broken1 {
+   line-height: 1.4em;
+   --w: 10ch;
+   letter-spacing: var(--w);
+   width: calc(var(--w) + var(--y,0px));
+   white-space: nowrap;
+   text-shadow: 
+     calc(-1*var(--w)) 0 0, 
+     calc(-2*var(--w)) 0 0, 
+     calc(-3*var(--w)) 0 0, 
+     calc(-4*var(--w)) 0 0,
+
+     calc(-5*var(--w) + var(--y,0px)) var(--x,0px) 0, 
+     calc(-6*var(--w) + var(--y,0px)) var(--x,0px) 0, 
+     calc(-7*var(--w) + var(--y,0px)) var(--x,0px) 0, 
+     calc(-8*var(--w) + var(--y,0px)) var(--x,0px) 0, 
+     calc(-9*var(--w) + var(--y,0px)) var(--x,0px) 0;
+   box-shadow:0 0 0px 80px var(--c,#0000);
+   background:var(--c,#0000);
+  clip-path: polygon(0 0,calc(50% + 0.35em) 0,calc(50% + 0.35em + var(--y,0px)/2) var(--x,0),100% var(--x,0),100% calc(100% + var(--x,0px)),calc(50% - 0.35em) calc(100% + var(--x,0px)),calc(50% - 0.35em - var(--y,0px)/2) 100%,0 100%);
+  transform: translateY( calc(var(--x,0)/-2));
+  transition: 0s,color  0.4s,background  0.4s,box-shadow  0.4s; 
+ }
+.broken1:hover {
+  --c:#000;
+  color:#fff;
+  --y:0.4px;
+  --x:-0.2px;
+  transition: 0.3s,text-shadow  cubic-bezier(.5,150,.5,-150)  0.4s 0.3s,width  cubic-bezier(.5,150,.5,-150) 0.4s 0.3s,transform cubic-bezier(.5,150,.5,-150)   0.4s 0.3s,clip-path cubic-bezier(.5,150,.5,-150)   0.4s 0.3s; 
+}
+
+@property --g1{
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+@property --g2{
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+@property --g3{
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+@property --g4{
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.steps1 {
+  padding-bottom: 8px;
+  --g1:4;
+  --g2:4;
+  --g3:4;
+  --g4:4;
+  background:
+    linear-gradient(currentColor 0 0) calc(var(--g1)*100%/3) 100%,
+    linear-gradient(currentColor 0 0) calc(var(--g2)*100%/3) 100%,
+    linear-gradient(currentColor 0 0) calc(var(--g3)*100%/3) 100%,
+    linear-gradient(currentColor 0 0) calc(var(--g4)*100%/3) 100%;
+  background-size: 25% 3px;
+  background-repeat: no-repeat;
+  transition:--g1 .2s .6s,--g2 .2s .4s,--g3 .2s .2s,--g4 .2s;
+}
+.steps1:hover {
+  --g1:0;
+  --g2:1;
+  --g3:2;
+  --g4:3;
+  transition:--g1 .2s,--g2 .2s .2s,--g3 .2s .4s,--g4 .2s .6s;
+ }
+
+ .steps2 {
+  padding-bottom: 8px;
+  --g1:-4;
+  --g2:-4;
+  --g3:5;
+  --g4:5;
+  background:
+    linear-gradient(currentColor 0 0) calc(var(--g1)*100%/3) 100%,
+    linear-gradient(currentColor 0 0) calc(var(--g2)*100%/3) 100%,
+    linear-gradient(currentColor 0 0) calc(var(--g3)*100%/3) 100%,
+    linear-gradient(currentColor 0 0) calc(var(--g4)*100%/3) 100%;
+  background-size: 25% 3px;
+  background-repeat: no-repeat;
+  transition:--g1 .2s,--g2 .2s .3s,--g3 .2s .3s,--g4 .2s ;
+}
+.steps2:hover {
+  --g1:0;
+  --g2:1;
+  --g3:2;
+  --g4:3;
+  transition:--g1 .2s .3s,--g2 .2s,--g3 .2s ,--g4 .2s .3s;
+ }
+
+  .steps3 {
+  padding-bottom: 8px;
+  --g1:6;
+  --g2:6;
+  --g3:6;
+  --g4:6;
+  background:
+    linear-gradient(currentColor 0 0) calc(0*100%/3) calc(100% + var(--g1)*1px),
+    linear-gradient(currentColor 0 0) calc(1*100%/3) calc(100% + var(--g2)*1px),
+    linear-gradient(currentColor 0 0) calc(2*100%/3) calc(100% + var(--g3)*1px),
+    linear-gradient(currentColor 0 0) calc(3*100%/3) calc(100% + var(--g4)*1px);
+  background-size: 25% 3px;
+  background-repeat: no-repeat;
+  transition:--g1 .2s .6s,--g2 .2s .4s,--g3 .2s .2s,--g4 .2s;
+  transition-timing-function: cubic-bezier(0,-2,1,-2);
+}
+.steps3:hover {
+  --g1:0;
+  --g2:0;
+  --g3:0;
+  --g4:0;
+  transition:--g1 .2s,--g2 .2s .2s,--g3 .2s .4s,--g4 .2s .6s;
+  transition-timing-function: cubic-bezier(0,3,1,3);
+ }
+
+   .steps4 {
+  padding-bottom: 8px;
+  --g1:0;
+  --g2:0;
+  --g3:0;
+  --g4:0;
+  background:
+    linear-gradient(currentColor 0 0) calc(0*100%/3) 100%/calc(var(--g1)*1%) 3px,
+    linear-gradient(currentColor 0 0) calc(1*100%/3) 100%/calc(var(--g2)*1%) 3px,
+    linear-gradient(currentColor 0 0) calc(2*100%/3) 100%/calc(var(--g3)*1%) 3px,
+    linear-gradient(currentColor 0 0) calc(3*100%/3) 100%/calc(var(--g4)*1%) 3px;
+  background-repeat: no-repeat;
+  transition:--g1 .2s .6s,--g2 .2s .4s,--g3 .2s .2s,--g4 .2s;
+}
+.steps4:hover {
+  --g1:25;
+  --g2:25;
+  --g3:25;
+  --g4:25;
+  transition:--g1 .2s,--g2 .2s .2s,--g3 .2s .4s,--g4 .2s .6s;
+ }
+ .steps5 {
+  padding-bottom: 8px;
+  --g1:-70;
+  --g2:-70;
+  --g3:-70;
+  --g4:-70;
+  background:
+    linear-gradient(currentColor 0 0) calc(0*100%/3) calc(100% + var(--g1)*1px),
+    linear-gradient(currentColor 0 0) calc(1*100%/3) calc(100% + var(--g2)*1px),
+    linear-gradient(currentColor 0 0) calc(2*100%/3) calc(100% + var(--g3)*1px),
+    linear-gradient(currentColor 0 0) calc(3*100%/3) calc(100% + var(--g4)*1px);
+  background-size: 25% 3px;
+  background-repeat: no-repeat;
+  transition:--g1 .2s .6s,--g2 .2s .4s,--g3 .2s .2s,--g4 .2s;
+}
+.steps5:hover {
+  --g1:0;
+  --g2:0;
+  --g3:0;
+  --g4:0;
+  transition:--g1 .2s,--g2 .2s .2s,--g3 .2s .4s,--g4 .2s .6s;
+ }
+.steps6 {
+  padding-bottom: 8px;
+  --g1:0;
+  --g2:0;
+  --g3:0;
+  --g4:0;
+  background:linear-gradient(currentColor 0 0) bottom/100% 3px no-repeat;
+  -webkit-mask:
+    linear-gradient(#000 0 0) top/100% calc(100% - 3px),
+    linear-gradient(rgba(0,0,0,var(--g1)) 0 0) calc(0*100%/3) 100%/25% 3px,
+    linear-gradient(rgba(0,0,0,var(--g2)) 0 0) calc(1*100%/3) 100%/25% 3px,
+    linear-gradient(rgba(0,0,0,var(--g3)) 0 0) calc(2*100%/3) 100%/25% 3px,
+    linear-gradient(rgba(0,0,0,var(--g4)) 0 0) calc(3*100%/3) 100%/25% 3px;
+  -webkit-mask-repeat: no-repeat;
+  transition:--g1 .2s .6s,--g2 .2s .4s,--g3 .2s .2s,--g4 .2s;
+  transition:--g1 .3s,--g2 .2s .2s,--g3 .2s .4s,--g4 .2s .6s;
+  transition-timing-function: linear;
+}
+.steps6:hover {
+  --g1:1;
+  --g2:1;
+  --g3:1;
+  --g4:1;
+  transition:--g1 .3s,--g2 .2s .2s,--g3 .2s .4s,--g4 .2s .6s;
+  transition-timing-function: linear;
+ }
+
+  .steps7 {
+  padding-bottom: 8px;
+  --g1:6;
+  --g2:5;
+  --g3:0;
+  --g4:-70;
+  background:
+    linear-gradient(currentColor 0 0) calc(0*100%/3) calc(100% + var(--g1)*1px)/25% 3px,
+    linear-gradient(currentColor 0 0) calc(var(--g2)*100%/3) 100%/25% 3px,
+    linear-gradient(currentColor 0 0) calc(2*100%/3) 100%/calc(var(--g3)*1%) 3px,
+    linear-gradient(currentColor 0 0) calc(3*100%/3) calc(100% + var(--g4)*1px)/25% 3px;
+  background-repeat: no-repeat;
+  transition:--g1 .2s .6s cubic-bezier(0,-2,1,-2),--g2 .2s .4s ,--g3 .2s .2s,--g4 .2s;
+}
+.steps7:hover {
+  --g1:0;
+  --g2:1;
+  --g3:25;
+  --g4:0;
+  transition:--g1 .2s cubic-bezier(0,3,1,3),--g2 .2s .2s ,--g3 .2s .4s,--g4 .2s .6s;
+ } 
+
+div[class] {
+  display:inline-block;
+  font-size:40px;
+  font-family:sans-serif;
+  margin:25px;
+  padding:8px;
+  cursor:pointer;
+}
+
+body {
+  text-align:center;
+}
+</style>
+</html>
