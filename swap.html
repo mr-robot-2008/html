@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var x=0,y=0;
+		function num()
+		{
+		x = parseInt(document.getElementById("t1").value);
+		y = parseInt(document.getElementById("t2").value);
+		}
+		function add(){
+			num();
+			var z=x+y;
+			document.getElementById("t3").value = z;
+		}
+		function sub(){
+			num();
+			var z=x-y;
+			document.getElementById("t3").value = z;
+		}
+		function mul(){
+			num();
+			var z=x*y;
+			document.getElementById("t3").value = z;
+		}
+		function div(){
+			num();
+			var z=x/y;
+			document.getElementById("t3").value = z;
+		}
+	</script>
+	<title></title>
+</head>
+<body>
+	First number:<input type = "text" id ="t1"><br>
+	Second number:<input type = "text" id ="t2"><br>
+	<input type ="button" value ="ADD" onclick="add()">
+	<input type ="button" value ="Sub" onclick="sub()">
+	<input type ="button" value ="MUL" onclick="mul()">
+	<input type ="button" value ="DIV" onclick="div()"><br>
+	Result:<input type = "text" id ="t3">
+
+</body>
+</html>
