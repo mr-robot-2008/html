@@ -1,0 +1,214 @@
+<html>
+<head>
+<title> Login Form 2 </title>
+</head>
+<body>
+<div class="wrapper">
+
+    <input id="signUpBtn" class="signUpBtn" type="radio" name="btn" checked>
+    <label for="signUpBtn"></label>
+
+    <input id="loginButton" class="loginBtn" type="radio" name="btn">
+    <label for="loginButton"></label>
+
+    <form action="" class="form">
+      <label for="fname" class="fname"></label>
+      <input type="text" id="fname" class="fname" placeholder="First Name">
+
+      <label for="lname" class="lname"></label>
+      <input type="text" id="lname" class="lname" placeholder="Last Name">
+
+      <label for="email" class="email"></label>
+      <input type="email" id="email" class="email" placeholder="Email">
+
+      <label for="secret" class="pass"></label>
+      <input type="password" id="secret" class="pass" placeholder="Password">
+
+      <input type="checkbox" id="formButton" class="formButton">
+      <label for="formButtom"></label>
+    </form>
+  </div>
+</body>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  --wrapperWidth: 700px;
+  --wrapperHeight: 400px;
+  --btnWidth: 160px;
+  --btnHeight: 44px;
+  --leftColor: #f2f2f2;
+  --rightColor: #0E4CEB;
+}
+
+h1 {
+  font-weight: lighter;
+  color: #999;
+  font-size: 1em;
+  transform: translateY(-4em);
+}
+
+.wrapper {
+  display: flex;
+  width: var(--wrapperWidth);
+  height: var(--wrapperHeight);
+  background: linear-gradient(to right, var(--leftColor) 50%, white 50%);
+  position: relative;
+  border: 1px solid var(--rightColor);
+}
+
+.loginBtn, .signUpBtn {
+  display: none;
+}
+
+.loginBtn + label, .signUpBtn + label {
+  position: absolute;
+  content: '';
+  cursor: pointer;
+  font-size: 1em;
+  width: var(--btnWidth);
+  height: var(--btnHeight);
+  border: 1px solid var(--rightColor);
+  color: var(--rightColor);
+  bottom: 4em;
+}
+
+.loginBtn + label {
+  right: calc(50% / 2  - var(--btnWidth) / 2 );
+}
+
+.signUpBtn + label {
+  left: calc(50% / 2  - var(--btnWidth) / 2 );
+}
+
+.loginBtn + label:before, .signUpBtn + label:before {
+  position: absolute;
+  color: var(--rightColor);
+  padding-top: calc(var(--btnHeight) / 3);
+  top: 0; right: 0; bottom: 0; left: 0; margin: auto;
+  text-align: center;
+  transition:all .5s;
+}
+
+.loginBtn + label:hover:before, .signUpBtn + label:hover:before {
+  background: var(--rightColor);
+  color: white;
+}
+
+.loginBtn + label:before {
+  content: 'Login';
+}
+
+.signUpBtn + label:before {
+  content: 'Sign Up';
+}
+
+.form {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: absolute;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: .5em 2em;
+  height: 400px;
+  width: 300px;
+  transform: translate3d(calc(var(--wrapperWidth) / 10 ), calc(var(--wrapperHeight) / -10 ), 0);
+  box-shadow: 0 1em 3em rgba(0,0,0,.2);
+  transition: transform .35s ease-in-out;
+}
+
+.form input {
+  height: 44px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 0 1em;
+  font-size: 1em;
+  transition: all .5s;
+}
+
+.form input:focus {
+  border-bottom: 1px solid #0E4CEB;
+}
+
+.form label {
+  color: #ccc;
+}
+
+.formButton {
+  display: none;
+}
+
+.formButton + label {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 44px;
+  border-radius: .25em;
+  background: mediumseagreen;
+  transition: all .25s ease-in;
+}
+
+.formButton + label:hover {
+  background: mediumaquamarine;
+}
+
+.formButton + label:before, .formButton + label:after {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0; margin: auto;
+  text-align: center;
+  color: white;
+  padding-top: .85em;
+  transition: transform .25s ease-in;
+}
+
+.formButton + label:before {
+  content: 'Sign Up';
+}
+
+.formButton + label:after {
+  content: 'Login';
+  transform: translateY(3em);
+}
+
+.fname, .lname, .email, .pass {
+  transition: all .35s ease-out;
+}
+
+.loginBtn:checked ~ .form {
+  transform: translate3d(calc(var(--wrapperWidth) / 2.2 ), calc(var(--wrapperHeight) / -10 ), 0);
+}
+
+.signUpBtn:checked ~ .form {
+  transform: translate3d(calc(var(--wrapperWidth) / 10 ), calc(var(--wrapperHeight) / -10 ), 0);
+}
+
+.loginBtn:checked ~ .form .fname {
+  transform: translateY(-15em);
+}
+
+.loginBtn:checked ~ .form .lname {
+  transform: translateY(-15em);
+}
+
+.loginBtn:checked ~ .form .email, .loginBtn:checked ~ .form .pass {
+  transform: translateY(-10em);
+}
+
+.loginBtn:checked ~ .form .formButton + label:before {
+  transform: translateY(-2em);
+}
+
+.loginBtn:checked ~ .form .formButton + label:after {
+  transform: translateY(0em);
+}
+</style>
+</html>
