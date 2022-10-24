@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script>
+        
+        var operatorIsPresent = 0;
+		function getValue(n) {
+            if((n == '+') || (n=='-') || (n == 'x') || (n == '/'))
+            {
+                operatorIsPresent = 1;
+                document.getElementById("operator").value += n;
+                document.getElementById("expression").value += n;
+                exit;
+            }
+            if(operatorIsPresent == 0)
+            {
+                document.getElementById("operand1").value+=n;
+            }
+            else
+            {
+                document.getElementById("operand2").value+=n;
+            }
+            document.getElementById("expression").value += n;
+		}
+
+		function clearExpression() {
+            document.getElementById("expression").value = "";
+            document.getElementById("operand1").value = "";
+            document.getElementById("operator").value = "";
+            document.getElementById("operand2").value = "";
+            operatorIsPresent = 0;
+		}
+
+		function backspace() {
+			str = document.getElementById("expression").value;
+			str = str.slice(0, -1); 
+			document.getElementById("expression").value = str;
+			if (document.getElementById("operator").value == "" && document.getElementById("operand2").value == "") {
+				document.getElementById("operand1").value = str;
+			}
+			else if (document.getElementById("operator").value != "" && document.getElementById("operand2").value == "") {
+				str = document.getElementById("operator").value;
+				str = str.slice(0, -1); 
+				document.getElementById("operator").value = str;
+				if (document.getElementById("operator").value == ""){
+					operatorIsPresent = 0;
+				}
+				else {
+					operatorIsPresent = 1;
+				}
+			}
+			else {
+				str = document.getElementById("operand2").value;
+				str = str.slice(0, -1); 
+				document.getElementById("operand2").value = str;
+			}
+		}
+
+		function getPercent() {
+			evaluateExpression();
+			let val = document.getElementById("operand1").value;
+			let answer = val/100;
+			document.getElementById("operand1").value = answer;
+			document.getElementById("expression").value = answer;
+		}
+
+		function changeSign() {
+			evaluateExpression();
+			let x = document.getElementById("operand1").value;
+			x = -x;
+			document.getElementById("operand1").value = x;
+			document.getElementById("expression").value = x;
+		}
+        
+        function evaluateExpression() {
+            let x = document.getElementById("operand1").value;
+            let y = document.getElementById("operator").value;
+            let z = document.getElementById("operand2").value;
+            document.getElementById("operator").value = "";
+            document.getElementById("operand2").value = "";
+            var answer = 0;
+            x = parseFloat(x);
+            z = parseFloat(z);
+            switch(y) {
+	            case '+':
+	            {
+	                answer = x+z;
+	                break;
+	            }
+	            case '-':
+	            {
+	                answer = x-z;
+	                break;
+	            }   
+	            case 'x':
+	            {
+	                answer = x*z;
+	                break;
+	            }
+	            case '/':
+	            {
+	                answer = x/z;
+	                break;
+	            }
+	            case '%':
+	            {
+	                answer = x%z;
+	                break;
+	            }
+	            default:
+	            {
+	            	answer = document.getElementById("operand1").value;
+	            }
+        	}
+        	document.getElementById("expression").value = "";
+	        document.getElementById("expression").value = answer;
+	        document.getElementById("operand1").value = answer;
+	        operatorIsPresent = 0;
+        }
+	</script>
+	<style>
+		h1 {
+			margin-bottom: -55px;
+			padding-bottom: 50px;
+			color: black;
+			font-size: 48px;
+			background-color: rgba(200, 200, 200, 0.8);
+			width: 40%;
+			border-radius: 35px;
+		}
+		body {
+			margin: 20px;
+			padding-top: 10px;
+			font-family: avenir next;
+			background-image: url("images/woodenbg.jpeg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		table {
+			background-color: black;
+			padding: 30px;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			width: 40%;
+			font-size: 22px;
+			border-radius: 15px;
+		}
+		td {
+			width: 25%;
+			align-content: center;
+		}
+		input {
+			width: 99%;
+			height: 60px;
+			font-family: avenir next;
+			font-size: 28px;
+			color: white;
+			border: 0px;
+			border-radius: 10px;
+
+		}
+		input#toprow {
+			background-color: darkgrey;
+			color: black;
+		}
+		input#numbers {
+			background-color: rgb(100, 100, 100);
+		}
+		input#operators {
+			background-color: orange;
+		}
+		input.clearButton {
+			width: 99%;
+			height: 55px;
+			align-content: center;
+			align-items: center;
+			text-align: center;
+			background-image: url("images/backspace.png");
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-color: rgb(210, 210, 210);
+			border-width: 1px;
+		}
+		input.expressionBar {
+			color: black;
+			width: 97%;
+			height: 55px;
+			margin-bottom: 4px;
+			border: 2px solid rgb(150, 150, 150);
+			border-style: inset;
+			border-radius: 2px;
+			border-style: double;
+		}
+		input.evaluate {
+			width: 20%;
+			height: 20px;
+			margin: 50px;
+		}
+	</style>
+</head>
+<body>
+	<center><h1>CALCULATOR</h1></center>
+	<table align="center" cellspacing="5px">
+		<tr>
+			<td colspan="3"><input type="text" class="expressionBar" id="expression" align="left" style="text-align: right;"></td>
+			<td width="80%"><input type="button" class="clearButton" name="backspace" onclick="javascript: backspace()"></td>
+		</tr>
+		<tr>
+			<td><input id="toprow" type="button" name="clear" value="AC" onclick="javascript: clearExpression()"></td>
+			<td><input id="toprow" type="button" name="negate" value="±" onclick="javascript: changeSign()"></td>
+			<td><input id="toprow" type="button" name="percentage" value="%" onclick="javascript: getPercent()"></td>
+			<td><input id="operators" type="button" name="divide" value="÷" onclick="javascript: getValue('/')"></td>
+		</tr>
+		<tr>
+			<td><input id="numbers" type="button" name="seven" value="7" onclick="javascript: getValue('7')"></td>
+			<td><input id="numbers" type="button" name="eight" value="8" onclick="javascript: getValue('8')"></td>
+			<td><input id="numbers" type="button" name="nine" value="9" onclick="javascript: getValue('9')"></td>
+			<td><input id="operators" type="button" name="multiply" value="x" onclick="javascript: getValue('x')"></td>
+		</tr>
+		<tr>
+			<td><input id="numbers" type="button" name="four" value="4" onclick="javascript: getValue('4')"></td>
+			<td><input id="numbers" type="button" name="five" value="5" onclick="javascript: getValue('5')"></td>
+			<td><input id="numbers" type="button" name="six" value="6" onclick="javascript: getValue('6')"></td>
+			<td><input id="operators" type="button" name="subtract" value="-" onclick="javascript: getValue('-')"></td>
+		</tr>
+		<tr>
+			<td><input id="numbers" type="button" name="one" value="1" onclick="javascript: getValue('1')"></td>
+			<td><input id="numbers" type="button" name="two" value="2" onclick="javascript: getValue('2')"></td>
+			<td><input id="numbers" type="button" name="three" value="3" onclick="javascript: getValue('3')"></td>
+			<td><input id="operators" type="button" name="add" value="+" onclick="javascript: getValue('+')"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input id="numbers" type="button" name="zero" value="0" onclick="javascript: getValue('0')"></td>
+			<td><input id="numbers" type="button" name="decimal" value="•" onclick="javascript: getValue('.')"></td>
+			<td><input id="operators" type="button" name="evaluate" value="=" onclick="javascript: evaluateExpression()"></td>
+		</tr>
+	</table>
+	<input type="text" class="evaluate" name="op1" id="operand1" hidden="yes">
+	<input type="text" class="evaluate" name="oper" id="operator" hidden="yes">
+	<input type="text" class="evaluate" name="op2" id="operand2" hidden="yes">
+</body>
+</html>
