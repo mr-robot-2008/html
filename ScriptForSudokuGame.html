@@ -1,0 +1,391 @@
+ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ, [19-10-2022 13:34]
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Solver</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Saira:wght@200&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-family: 'Saira', sans-serif;
+    }
+    
+    body{
+        background-image: linear-gradient(to right bottom, #080808, #222325, #383d3e, #525855, #72746c);
+    }
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main .row{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    main .column{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main .cell{
+        width: 30px;
+        height: 30px;
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        outline: none;
+        caret-color: transparent;
+        border: 1px black solid;
+        border-radius: 20%;
+    }
+    
+    #c2, #c11, #c20, #c29, #c38, #c47, #c56, #c65, #c74,
+    #c5, #c14, #c23, #c32, #c41, #c50, #c59, #c68, #c77{
+        border-right: 2px black solid;
+    }
+    
+    #c18, #c19, #c20, #c21, #c22, #c23, #c24, #c25, #c26,
+    #c45, #c46, #c47, #c48, #c49, #c50, #c51, #c52, #c53 {
+        border-bottom: 2px black solid;
+    }
+    
+    main .cell:focus{
+        background-color: rgb(126, 255, 176);
+        cursor: none;
+    }
+    
+    main .controls{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 12rem;
+    }
+    
+    main .controls .btn{
+        width: 60px;
+        height: 40px;
+        border-radius: 10px;
+        background-color: rgb(29, 29, 29);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    main .controls .btn:hover{
+        background-color: rgb(89, 89, 89);
+    }
+    
+    main .controls #solve{
+        display: inline-block;
+    }
+    
+    main .controls #unsolve{
+        display: none;
+    }
+    
+    main .board{
+        margin-top: 20px;
+    }
+    
+    footer{
+    
+       
+        padding: 10px 0;
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom:0;
+        width: 100%;
+    }
+    
+    footer a{
+        
+        text-decoration: none;
+      color: rgba(255, 97, 97, 0.858);
+    }</style>  </head>
+  <body>
+    <main>
+      <div class="board">
+        <div class="row">
+          <input type="text" maxlength="1" id="c0" class="cell" />
+          <input type="text" maxlength="1" id="c1" class="cell" />
+          <input type="text" maxlength="1" id="c2" class="cell" />
+          <input type="text" maxlength="1" id="c3" class="cell" />
+          <input type="text" maxlength="1" id="c4" class="cell" />
+          <input type="text" maxlength="1" id="c5" class="cell" />
+          <input type="text" maxlength="1" id="c6" class="cell" />
+          <input type="text" maxlength="1" id="c7" class="cell" />
+          <input type="text" maxlength="1" id="c8" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c9" class="cell" />
+          <input type="text" maxlength="1" id="c10" class="cell" />
+          <input type="text" maxlength="1" id="c11" class="cell" />
+          <input type="text" maxlength="1" id="c12" class="cell" />
+          <input type="text" maxlength="1" id="c13" class="cell" />
+          <input type="text" maxlength="1" id="c14" class="cell" />
+          <input type="text" maxlength="1" id="c15" class="cell" />
+          <input type="text" maxlength="1" id="c16" class="cell" />
+          <input type="text" maxlength="1" id="c17" class="cell" />
+        </div>
+        <div class="row">
+
+ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ, [19-10-2022 13:34]
+<input type="text" maxlength="1" id="c18" class="cell" />
+          <input type="text" maxlength="1" id="c19" class="cell" />
+          <input type="text" maxlength="1" id="c20" class="cell" />
+          <input type="text" maxlength="1" id="c21" class="cell" />
+          <input type="text" maxlength="1" id="c22" class="cell" />
+          <input type="text" maxlength="1" id="c23" class="cell" />
+          <input type="text" maxlength="1" id="c24" class="cell" />
+          <input type="text" maxlength="1" id="c25" class="cell" />
+          <input type="text" maxlength="1" id="c26" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c27" class="cell" />
+          <input type="text" maxlength="1" id="c28" class="cell" />
+          <input type="text" maxlength="1" id="c29" class="cell" />
+          <input type="text" maxlength="1" id="c30" class="cell" />
+          <input type="text" maxlength="1" id="c31" class="cell" />
+          <input type="text" maxlength="1" id="c32" class="cell" />
+          <input type="text" maxlength="1" id="c33" class="cell" />
+          <input type="text" maxlength="1" id="c34" class="cell" />
+          <input type="text" maxlength="1" id="c35" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c36" class="cell" />
+          <input type="text" maxlength="1" id="c37" class="cell" />
+          <input type="text" maxlength="1" id="c38" class="cell" />
+          <input type="text" maxlength="1" id="c39" class="cell" />
+          <input type="text" maxlength="1" id="c40" class="cell" />
+          <input type="text" maxlength="1" id="c41" class="cell" />
+          <input type="text" maxlength="1" id="c42" class="cell" />
+          <input type="text" maxlength="1" id="c43" class="cell" />
+          <input type="text" maxlength="1" id="c44" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c45" class="cell" />
+          <input type="text" maxlength="1" id="c46" class="cell" />
+          <input type="text" maxlength="1" id="c47" class="cell" />
+          <input type="text" maxlength="1" id="c48" class="cell" />
+          <input type="text" maxlength="1" id="c49" class="cell" />
+          <input type="text" maxlength="1" id="c50" class="cell" />
+          <input type="text" maxlength="1" id="c51" class="cell" />
+          <input type="text" maxlength="1" id="c52" class="cell" />
+          <input type="text" maxlength="1" id="c53" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c54" class="cell" />
+          <input type="text" maxlength="1" id="c55" class="cell" />
+          <input type="text" maxlength="1" id="c56" class="cell" />
+          <input type="text" maxlength="1" id="c57" class="cell" />
+          <input type="text" maxlength="1" id="c58" class="cell" />
+          <input type="text" maxlength="1" id="c59" class="cell" />
+          <input type="text" maxlength="1" id="c60" class="cell" />
+          <input type="text" maxlength="1" id="c61" class="cell" />
+          <input type="text" maxlength="1" id="c62" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c63" class="cell" />
+          <input type="text" maxlength="1" id="c64" class="cell" />
+          <input type="text" maxlength="1" id="c65" class="cell" />
+          <input type="text" maxlength="1" id="c66" class="cell" />
+          <input type="text" maxlength="1" id="c67" class="cell" />
+          <input type="text" maxlength="1" id="c68" class="cell" />
+          <input type="text" maxlength="1" id="c69" class="cell" />
+          <input type="text" maxlength="1" id="c70" class="cell" />
+          <input type="text" maxlength="1" id="c71" class="cell" />
+        </div>
+        <div class="row">
+          <input type="text" maxlength="1" id="c72" class="cell" />
+          <input type="text" maxlength="1" id="c73" class="cell" />
+
+ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ, [19-10-2022 13:34]
+<input type="text" maxlength="1" id="c74" class="cell" />
+          <input type="text" maxlength="1" id="c75" class="cell" />
+          <input type="text" maxlength="1" id="c76" class="cell" />
+          <input type="text" maxlength="1" id="c77" class="cell" />
+          <input type="text" maxlength="1" id="c78" class="cell" />
+          <input type="text" maxlength="1" id="c79" class="cell" />
+          <input type="text" maxlength="1" id="c80" class="cell" />
+        </div>
+      </div>
+      <div class="controls">
+        <input
+          type="button"
+          value="Solve"
+          class="btn"
+          id="solve"
+          onclick="solveSudoku()"
+        />
+        <input
+          type="button"
+          value="Unsolve"
+          class="btn"
+          id="unsolve"
+          onclick="unSolveSudoku()"
+        />
+        <input type="button" value="Reset" class="btn" onclick="resetBoard()" />
+      </div>
+    </main>
+
+<script>var board = [[-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1],
+    [-1, -1, -1, -1, -1, -1, -1, -1, -1]];
+    
+    var cells = document.getElementsByClassName("cell");
+    var unsolveBtn = document.getElementById("unsolve");
+    var solveBtn = document.getElementById("solve");;
+    var currRow = 0;
+    var currCol = 0;
+    
+    function isvalid(ch, row, col) {
+        for (var i = 0; i < 9; i++) {
+            if (board[row][i] == ch) return false;
+            if (board[i][col] == ch) return false;
+            if (board[(3 * Math.floor(row / 3)) + Math.floor(i / 3)][(3 * Math.floor(col / 3)) + i % 3] == ch) return false; // dry run on a 3*3 grid to understand better
+        }
+        return true;
+    }
+    
+    function solve_sudoku() {
+        for (var i = 0; i < 9; i++) {
+            for (var j = 0; j < 9; j++) {
+                if (board[i][j] == -1) {
+                    for (var ch = 1; ch <= 9; ch++) {
+                        if (isvalid(ch, i, j)) {
+                            board[i][j] = ch;
+                            if (solve_sudoku())
+                                return true;
+                            board[i][j] = -1; // backtrack
+                        }
+                    }
+                    return false;
+                }
+            }
+        }
+        return true; // if there is no empty cell return true
+    }
+    
+    function checkIfAllUnfilled() {
+        var count = 0;
+        for (var i = 0; i < 9; i++)
+            for (var j = 0; j < 9; j++)
+                count += board[i][j] == -1 ? 1 : 0;
+        return count == 81;
+    }
+    
+    function solveSudoku() {
+        if (checkIfAllUnfilled())
+            return;
+        solve_sudoku();
+        printBoard();
+        unsolveBtn.style.display = 'inline-block';
+        solveBtn.style.display = 'none';
+    }
+    
+    function unSolveSudoku() {
+        for (var i = 0; i < cells.length; i++) {
+            if (cells[i].style.color == 'red') {
+                cells[i].value = '';
+                cells[i].style.color = 'black';
+                board[Math.floor(i / 9)][i % 9] = -1;
+            }
+        }
+        solveBtn.style.display = 'inline-block';
+        unsolveBtn.style.display = 'none';
+    }
+    
+    function resetBoard() {
+        for (var i = 0; i < 9; i++)
+            for (var j = 0; j < 9; j++)
+                board[i][j] = -1;
+        unSolveSudoku();
+        printBoard();
+    }
+    
+    function printBoard() {
+        for (var i = 0; i < cells.length; i++) {
+            if (cells[i].value == '') {
+                if (board[Math.floor(i / 9)][i % 9] != -1) {
+                    cells[i].value = board[Math.floor(i / 9)][i % 9];
+                    cells[i].style.color = 'red';
+                }
+            }
+            else {
+                if (board[Math.floor(i / 9)][i % 9] == -1) {
+
+ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ, [19-10-2022 13:34]
+cells[i].value = '';
+                    cells[i].style.color = 'black';
+                }
+            }
+        }
+    }
+    
+    for (var i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('keyup', function (e) {
+            var x = parseInt(this.id.substring(1));
+            currRow = Math.floor(x / 9);
+            currCol = x % 9;
+            if (e.key >= '1' && e.key <= '9' && isvalid(parseInt(e.key), currRow, currCol)) {
+                this.value = e.key;
+                board[Math.floor(x / 9)][x % 9] = parseInt(e.key);
+            }
+            else if (e.key == 'Backspace' ||
+                (e.key != 'ArrowLeft' &&
+                    e.key != 'ArrowRight' &&
+                    e.key != 'ArrowUp' &&
+                    e.key != 'ArrowDown')) {
+                this.value = '';
+                board[Math.floor(x / 9)][x % 9] = -1;
+            }
+        });
+    };
+    
+    
+    document.addEventListener('keydown', function (e) {
+        // console.log(e);
+        if (e.key == 'ArrowLeft') {
+            currCol--;
+            if (currCol < 0) currCol = 0;
+            cells[currCol + currRow * 9].focus();
+        }
+        else if (e.key == 'ArrowRight') {
+            currCol++;
+            if (currCol >= 9) currCol = 8;
+            cells[currCol + currRow * 9].focus();
+        }
+        else if (e.key == 'ArrowDown') {
+            currRow++;
+            if (currRow >= 9) currRow = 8;
+            cells[currCol + currRow * 9].focus();
+        }
+        else if (e.key == 'ArrowUp') {
+            currRow--;
+            if (currRow < 0) currRow = 0;
+            cells[currCol + currRow * 9].focus();
+        }
+    });</script>  </body>
+</html>
