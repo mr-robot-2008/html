@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <style>
+        #container {
+            height: 30px;
+            width: 300px;
+            background-color: lightgrey;
+            margin-bottom: 5px;
+        }
+        
+        #progress {
+            width: 0%;
+            height: 100%;
+            background-color: blue;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Progress Bar</h1>
+    <div id="container">
+        <div id="progress"></div>
+    </div>
+    <button id="btn">Run</button>
+    <script>
+        function Progressbar(progressEl, btnEl, seconds) {
+            let progress = document.querySelector(progressEl);
+            let runBtn = document.querySelector(btnEl);
+            let clickCount = 0;
+
+            function setClickCount(count) {
+                runBtn.innerText = Run ${count || ""};
+            }
+
+            function setProgress(n) {
+                progress.style.width = ${n}%;
+            }
+
+            function doneProgress() {
+                clickCount--;
+                setClickCount(clickCount);
+                // recursively setup progress bar if required
+                if (clickCount > 0) {
+                    setupProgressInterval(doneProgress);
+                }
+            }
+
+            function setupProgressInterval(done) {
+                let progressPct = 0;
+                let interval = setInterval(() => {
+                    progressPct++;
+                    setProgress(progressPct);
+
+                    if (progressPct === 100) {
+                        // reset progress after completed
+                        setProgress(0);
+                        clearInterval(interval);
+                        done();
+                    }
+                }, seconds * 10);
+            }
+
+            function handleButtonClick() {
+                clickCount += 1;
+                setClickCount(clickCount);
+
+                // call setup on first call only
+                if (clickCount === 1) {
+                    setupProgressInterval(doneProgress);
+                }
+            }
+
+            runBtn.addEventListener("click", handleButtonClick);
+        }
+
+        new Progressbar("#progress", "#btn", 3);
+    </script>
+</body>
+
+</html>
