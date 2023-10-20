@@ -13,3 +13,4 @@
 | Hritik Kumar | https://github.com/hritik-6918 |
 | A B VEEKSHITH | https://github.com/ABveekshith |
 | Arizki Putra Rahman | https://github.com/arizkinewbie |
+| Vishal Chavhan | https://github.com/vishalc29011 |
