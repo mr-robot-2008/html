@@ -1,0 +1,164 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <!-- <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100&display=swap" rel="stylesheet">
+    <style>
+        .card-registration .select-input .form-control{
+            font-size: 1 rem;
+            line-height: 2.15;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+        }
+ 
+        img{
+            height: 100%;
+            width: 100%;
+        }
+     
+    </style>
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+   
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+                <div class="card card-registration my-4">
+                    <div class="row g-0">
+                        <div class="col-xl-6 d-none d-xl-block">
+                            <img src="data:image/png;base64,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" alt="sample photo"
+                            style="border-top-left-radius: 0.25 rem; border-bottom-left-radius:0.25 rem;"
+                            />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5  text-black">
+                                <h3 class="mb-5 text-uppercase">Student Registration Form </h3>
+                           
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="form3Example1m" class="form-control form-control-lg"/>
+                                            <label class="form-label" for="form3Example1m">First Name</label>
+                                        </div>
+                                     
+                                    </div>
+ 
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="form3Example1n" class="form-control form-control-lg"/>
+                                            <label class="form-label" for="form3Example1n">Last Name</label>
+                                        </div>
+                                     
+                                    </div>
+                                </div>
+                           
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="form3Example1m1" class="form-control form-control-lg"/>
+                                            <label class="form-label" for="form3Example1m1">Father's Name</label>
+                                        </div>
+                                     
+                                    </div>
+ 
+                                    <div class="col-md-6 mb-4">
+                                        <div class="form-outline">
+                                            <input type="text" id="form3Example1n1" class="form-control form-control-lg"/>
+                                            <label class="form-label" for="form3Example1n1">Mother's Name</label>
+                                        </div>
+                                     
+                                    </div>
+ 
+                                </div>
+ 
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="form3Example8" class="form-control form-control-lg" >
+                                    <label class="form-label" for="form3Example8">Address</label>
+                                </div>
+ 
+                                <div class="d-md-flex justify-content-center align-items-center mb-4 py-2">
+                                    <h5 class="mb-0 me-4">Gender:</h5>
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender" value="option1">
+                                        <label class="form-check-label" for="femaleGender">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender" value="option2">
+                                        <label class="form-check-label" for="maleGender">Male</label>
+                                    </div>
+ 
+                                    <div class="form-check form-check-inline mb-0 me-4">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender" value="option3">
+                                        <label class="form-check-label" for="otherGender">Prefer Not to say</label>
+                                    </div>
+                                </div>
+ 
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <select class="select">
+                                            <option value="1">State...</option>
+                                            <option value="2">Maharashtra</option>
+                                            <option value="3">Karnataka</option>
+                                            <option value="4">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+ 
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <select class="select">
+                                            <option value="1">City...</option>
+                                            <option value="2">Maharashtra</option>
+                                            <option value="3">Karnataka</option>
+                                            <option value="4">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+ 
+                                <div class="form-ouline mb-4">
+                                    <input type="text" id="form3Example9"  class="form-control form-control-lg" />
+                                    <label class="form3Example9">Date of Birth</label>
+                                </div>
+ 
+                                <div class="form-ouline mb-4">
+                                    <input type="text" id="form3Example1"  class="form-control form-control-lg" />
+                                    <label class="form3Example10">Pincode</label>
+                                </div>
+ 
+                                <div class="form-ouline mb-4">
+                                    <input type="email" id="form3Example11"  class="form-control form-control-lg" />
+                                    <label class="form3Example11">Email</label>
+                                </div>
+                           
+                                <div class="d-flex justify-content-end pt-3">
+                                    <button type="reset" class="btn btn-light btn-lg">
+                                        Reset
+                                    </button>
+                                    <button type="button" class="btn btn-warning btn-lg ms-2">
+                                       Submit Form
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+ 
+ 
+    </div>
+  </section>
+  </body>
+</html>
