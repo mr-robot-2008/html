@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT</title>
+    <style>
+        /* Add CSS styles here for your chat interface */
+        .chat-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .user-message {
+            text-align: right;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .assistant-message {
+            text-align: left;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chat-box">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
